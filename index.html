@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FitCRM - New Client Form</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <h1>New Client Form</h1>
+  
+  <form>
+    <label>Full Name: <input type="text" name="fullname"></label><br>
+    <label>Age: <input type="number" name="age"></label><br>
+    <label>Gender:
+      <select name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </label><br>
+    <label>Email: <input type="email" name="email"></label><br>
+    <label>Phone: <input type="tel" name="phone"></label><br>
+    <label>Fitness Goal:
+      <select name="goal">
+        <option value="weightloss">Weight Loss</option>
+        <option value="musclegain">Muscle Gain</option>
+        <option value="generalfitness">General Fitness</option>
+        <option value="other">Other</option>
+      </select>
+    </label><br>
+    <label>Membership Start Date: <input type="date" name="startdate"></label><br>
+    <button type="button">Add Client</button>
+  </form>
+
+  <a href="clients.html">Go to Client List →</a>
+</body>
+</html>
+
