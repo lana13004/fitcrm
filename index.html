@@ -1,76 +1,104 @@
-<link rel="stylesheet" href="css/styles.css">
-<a href="clients.html">View Client List</a>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FitCRM - New Client Form</title>
-  <!-- Link to external CSS file -->
+  <title>FitCRM - Add New Client</title>
+  <!-- Link to your CSS -->
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 20px;
+      color: #333;
+    }
+    h2 {
+      color: #2a9d8f;
+    }
+    form {
+      max-width: 500px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    .nav-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: #e76f51;
+      text-decoration: none;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Page Header -->
-  <header>
-    <h1>🌟 FitCRM - Add New Client 🌟</h1>
-  </header>
+  <h2>Add New Client</h2>
 
-  <!-- New Client Form -->
   <form>
-    <!-- Full Name input -->
-    <label>Full Name: 
-      <input type="text" name="fullname" placeholder="Enter full name">
-    </label>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter full name">
 
-    <!-- Age input -->
-    <label>Age: 
-      <input type="number" name="age" placeholder="Enter age">
-    </label>
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" placeholder="Enter age">
 
-    <!-- Gender dropdown -->
-    <label>Gender:
-      <select name="gender">
-        <option value="">Select gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-    </label>
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender">
+      <option value="">Select gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
 
-    <!-- Email input -->
-    <label>Email: 
-      <input type="email" name="email" placeholder="Enter email">
-    </label>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter email">
 
-    <!-- Phone input -->
-    <label>Phone: 
-      <input type="tel" name="phone" placeholder="Enter phone">
-    </label>
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
 
-    <!-- Fitness goal dropdown -->
-    <label>Fitness Goal:
-      <select name="goal">
-        <option value="">Select goal</option>
-        <option value="weightloss">Weight Loss</option>
-        <option value="musclegain">Muscle Gain</option>
-        <option value="generalfitness">General Fitness</option>
-        <option value="other">Other</option>
-      </select>
-    </label>
+    <label for="goal">Fitness Goal</label>
+    <select id="goal" name="goal">
+      <option value="">Select goal</option>
+      <option value="weight_loss">Weight Loss</option>
+      <option value="muscle_gain">Muscle Gain</option>
+      <option value="general_fitness">General Fitness</option>
+    </select>
 
-    <!-- Membership Start Date -->
-    <label>Membership Start Date: 
-      <input type="date" name="startdate">
-    </label>
+    <label for="start_date">Membership Start Date</label>
+    <input type="date" id="start_date" name="start_date">
 
-    <!-- Add Client Button (placeholder, no function yet) -->
     <button type="button">Add Client</button>
   </form>
 
-  <!-- Navigation link to Client List page -->
-  <p class="nav-link">
-    <a href="clients.html">➡ Go to Client List</a>
-  </p>
+  <a href="clients.html" class="nav-link">View Client List</a>
 
 </body>
 </html>
