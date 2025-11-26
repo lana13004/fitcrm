@@ -1,132 +1,195 @@
-<tbody>
-  <!-- First client row -->
-  <tr>
-    <td data-label="Name">Farida Abdelrazek</td>
-    <td data-label="Email">Faridaabdelrazek@gmail.com</td>
-    <td data-label="Phone">555-1234</td>
-    <td data-label="Fitness Goal">Weight Loss</td>
-    <td data-label="Membership Start Date">2024-01-15</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FitCRM - Client List</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Page background and font */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8; /* light blue background */
+      margin: 20px;
+      color: #333;
+    }
 
-  <!-- Second client row -->
-  <tr>
-    <td data-label="Name">Tarek Mohamed</td>
-    <td data-label="Email">Tarekkmohamed@gmail.com</td>
-    <td data-label="Phone">555-5678</td>
-    <td data-label="Fitness Goal">Muscle Gain</td>
-    <td data-label="Membership Start Date">2024-03-12</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+    /* Heading style */
+    h2 {
+      color: #2a9d8f; /* teal color */
+    }
 
-  <!-- Third client row -->
-  <tr>
-    <td data-label="Name">Lana Ahmed</td>
-    <td data-label="Email">lanabeshir@gmail.com</td>
-    <td data-label="Phone">555-8765</td>
-    <td data-label="Fitness Goal">General Fitness</td>
-    <td data-label="Membership Start Date">2023-11-10</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+    /* Search box styling */
+    label, input[type="text"] {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-  <!-- Fourth client row -->
-  <tr>
-    <td data-label="Name">Mohamed Beshir</td>
-    <td data-label="Email">Mohamedbeshir@gmail.com</td>
-    <td data-label="Phone">555-4321</td>
-    <td data-label="Fitness Goal">Weight Loss</td>
-    <td data-label="Membership Start Date">2024-06-01</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff; /* white table background */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #264653; /* dark teal header */
+      color: #ffffff; /* white text */
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2; /* striped rows */
+    }
 
-  <!-- Fifth client row -->
-  <tr>
-    <td data-label="Name">Yassin el Massry</td>
-    <td data-label="Email">Yassin@gmail.com</td>
-    <td data-label="Phone">555-6789</td>
-    <td data-label="Fitness Goal">Muscle Gain</td>
-    <td data-label="Membership Start Date">2025-02-20</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+    /* Buttons styling */
+    button {
+      padding: 6px 12px;
+      margin-right: 5px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    button:first-of-type {
+      background-color: #2a9d8f; /* edit button color */
+      color: #fff;
+    }
+    button:last-of-type {
+      background-color: #e76f51; /* delete button color */
+      color: #fff;
+    }
 
-  <!-- Sixth client row -->
-  <tr>
-    <td data-label="Name">Mirna Sameh</td>
-    <td data-label="Email">Mirnasameh@gmail.com</td>
-    <td data-label="Phone">555-3456</td>
-    <td data-label="Fitness Goal">General Fitness</td>
-    <td data-label="Membership Start Date">2024-09-15</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+    /* Responsive table */
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th {
+        display: none; /* hide headers on mobile */
+      }
+      tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ccc;
+      }
+      td {
+        padding-left: 50%;
+        position: relative;
+      }
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body>
 
-  <!-- Seventh client row -->
-  <tr>
-    <td data-label="Name">Malak Solima</td>
-    <td data-label="Email">Malaksoliman@gmail.com</td>
-    <td data-label="Phone">555-7890</td>
-    <td data-label="Fitness Goal">Weight Loss</td>
-    <td data-label="Membership Start Date">2024-12-05</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+  <!-- Page heading -->
+  <h2>Client List</h2>
 
-  <!-- Eighth client row -->
-  <tr>
-    <td data-label="Name">Ahmed Hany</td>
-    <td data-label="Email">Ahmedhany@gmail.com</td>
-    <td data-label="Phone">555-9012</td>
-    <td data-label="Fitness Goal">Muscle Gain</td>
-    <td data-label="Membership Start Date">2023-08-25</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+  <!-- Search input -->
+  <label for="search">Search Clients:</label>
+  <input type="text" id="search" name="search" placeholder="Search by client name">
 
-  <!-- Ninth client row -->
-  <tr>
-    <td data-label="Name">Ismail Mostafa</td>
-    <td data-label="Email">Ismailmostafa@gmail.com</td>
-    <td data-label="Phone">555-2345</td>
-    <td data-label="Fitness Goal">General Fitness</td>
-    <td data-label="Membership Start Date">2024-04-18</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
+  <!-- Client table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Fitness Goal</th>
+        <th>Membership Start Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Each td has data-label for responsive design -->
+      <tr>
+        <td data-label="Name">Farida Abdelrazek</td>
+        <td data-label="Email">Faridaabdelrazek@gmail.com</td>
+        <td data-label="Phone">555-1234</td>
+        <td data-label="Fitness Goal">Weight Loss</td>
+        <td data-label="Membership Start Date">2024-01-15</td>
+        <td data-label="Actions">
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Name">Tarek Mohamed</td>
+        <td data-label="Email">Tarekkmohamed@gmail.com</td>
+        <td data-label="Phone">555-5678</td>
+        <td data-label="Fitness Goal">Muscle Gain</td>
+        <td data-label="Membership Start Date">2024-03-12</td>
+        <td data-label="Actions">
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Name">Lana Ahmed</td>
+        <td data-label="Email">lanabeshir@gmail.com</td>
+        <td data-label="Phone">555-8765</td>
+        <td data-label="Fitness Goal">General Fitness</td>
+        <td data-label="Membership Start Date">2023-11-10</td>
+        <td data-label="Actions">
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Name">Mohamed Beshir</td>
+        <td data-label="Email">Mohamedbeshir@gmail.com</td>
+        <td data-label="Phone">555-4321</td>
+        <td data-label="Fitness Goal">Weight Loss</td>
+        <td data-label="Membership Start Date">2024-06-01</td>
+        <td data-label="Actions">
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Name">Yassin el Massry</td>
+        <td data-label="Email">Yassin@gmail.com</td>
+        <td data-label="Phone">555-6789</td>
+        <td data-label="Fitness Goal">Muscle Gain</td>
+        <td data-label="Membership Start Date">2025-02-20</td>
+        <td data-label="Actions">
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Name">Ahmed Hany</td>
+        <td data-label="Email">Ahmedhany@gmail.com</td> <!-- Fixed missing </td> -->
+        <td data-label="Phone">555-9012</td>
+        <td data-label="Fitness Goal">Muscle Gain</td>
+        <td data-label="Membership Start Date">2023-08-25</td>
+        <td data-label="Actions">
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-  <!-- Tenth client row -->
-  <tr>
-    <td data-label="Name">Gamal Hussein</td>
-    <td data-label="Email">Gamalhussein@gmail.com</td>
-    <td data-label="Phone">555-6781</td>
-    <td data-label="Fitness Goal">Weight Loss</td>
-    <td data-label="Membership Start Date">2025-01-05</td>
-    <td data-label="Actions">
-      <button type="button">Edit</button>
-      <button type="button">Delete</button>
-    </td>
-  </tr>
-</tbody>
+</body>
+</html>
 
