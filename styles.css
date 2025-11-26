@@ -1,0 +1,177 @@
+/* General body styling */
+body {
+font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, readable font */
+background: #fff0f6; /* Light pink background */
+margin: 20px; /* Space around the page */
+color: #5a2a27; /* Default text color */
+}
+
+/* Headings styling */
+h1, h2 {
+color: #bf5f82; /* Pink headings */
+font-weight: 700; /* Bold text */
+text-align: center; /* Center-aligned */
+margin-bottom: 20px; /* Space below headings */
+}
+
+/* Form container styling */
+form {
+background: #ffe1ec; /* Light pink form background */
+padding: 25px 30px; /* Inner spacing */
+max-width: 650px; /* Maximum width for larger screens */
+margin: auto; /* Center horizontally */
+border-radius: 20px; /* Rounded corners */
+box-shadow: 0 6px 15px rgba(255, 182, 193, 0.6); /* Soft shadow */
+}
+
+/* Form label styling */
+label {
+display: block; /* Labels on separate lines */
+font-size: 18px; /* Larger text for readability */
+margin: 12px 0 6px 0; /* Space above and below */
+color: #8e3c5e; /* Darker pink for label text */
+}
+
+/* Inputs and dropdown styling */
+input, select {
+width: 100%; /* Full width */
+padding: 12px 15px; /* Inner padding */
+border-radius: 15px; /* Rounded input boxes */
+border: 2px solid #f4c6d2; /* Light pink border */
+font-size: 16px;
+transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+/* Input focus effect */
+input:focus, select:focus {
+outline: none; /* Remove default outline */
+border-color: #bf5f82; /* Pink border on focus */
+box-shadow: 0 0 8px #fcc9d7; /* Soft glow */
+}
+
+/* Buttons styling */
+button {
+background: #f48fb1; /* Pink button */
+border: none;
+border-radius: 30px; /* Rounded pill shape */
+color: white;
+font-size: 18px;
+padding: 12px 25px;
+cursor: pointer; /* Hand pointer */
+margin-top: 20px;
+box-shadow: 0 5px 10px #f8bbd0; /* Button shadow */
+transition: background 0.3s ease;
+display: block; /* Button on its own line */
+width: 100%; /* Full width */
+}
+
+/* Button hover effect */
+button:hover {
+background: #ec407a; /* Darker pink on hover */
+}
+
+/* Search box styling */
+#search {
+display: block;
+max-width: 650px;
+margin: 25px auto 15px auto;
+padding: 15px 20px;
+border-radius: 25px;
+border: 2px solid #f4c6d2;
+font-size: 18px;
+}
+
+/* Table styling */
+table {
+width: 90%;
+max-width: 900px;
+border-collapse: separate; /* Add spacing between rows */
+border-spacing: 0 10px; /* Vertical spacing between rows */
+margin: 0 auto 50px auto;
+font-size: 16px;
+}
+
+/* Table cells styling */
+th, td {
+background: #fadadd; /* Light pink cell background */
+padding: 12px 20px;
+border-radius: 15px; /* Rounded cells */
+text-align: left;
+color: #6a496e;
+font-weight: 600;
+}
+
+/* Table header specific styling */
+th {
+background: #f8bbd0; /* Darker pink for headers */
+font-size: 18px;
+}
+
+/* Round the first and last cell corners in each row */
+tbody tr td:first-child {
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+tbody tr td:last-child {
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+
+/* Hover effect for table rows */
+tbody tr:hover td {
+background: #f48fb1; /* Pink background on hover */
+color: white; /* Text becomes white */
+cursor: pointer;
+}
+
+/* Action buttons inside table cells */
+td button {
+margin-right: 10px;
+padding: 8px 16px;
+border-radius: 20px;
+border: none;
+cursor: pointer;
+color: white;
+font-weight: bold;
+box-shadow: 0 3px 7px rgba(244, 143, 177, 0.6);
+transition: background 0.3s ease;
+}
+
+/* Edit button */
+td button:first-child {
+background-color: #b66f86;
+}
+
+/* Edit button hover */
+td button:first-child:hover {
+background-color: #9c5274;
+}
+
+/* Delete button */
+td button:last-child {
+background-color: #d82b5a;
+}
+
+/* Delete button hover */
+td button:last-child:hover {
+background-color: #ad2048;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+form, #search, table {
+width: 95%; /* Reduce width on mobile */
+}
+
+button, td button {
+width: 100%;
+margin-top: 10px;
+box-shadow: none; /* Remove shadows on mobile */
+}
+
+td button:first-child {
+margin-right: 0;
+}
+}
+

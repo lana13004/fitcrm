@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>FitCRM - Client List</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-<!-- Navigation link back to the New Client Form page -->
-  <a href="index.html">← Back to New Client Form</a
->
-<!-- Page Header -->
-  <h2>Client List</h2>
-
-<!-- Search box for filtering clients by name (UI only, no search functionalit yet) -->  
+ <h2>Client List</h2>
   <label for="search">Search Clients:</label>
-  <input type="text" id="search" name="search" placeholder="Search by client name" />
-<!-- Client List Table with headings -->  
-  <table>
+  <input type="text" id="search" name="search" placeholder="Search by client name">
+  
+
+<!-- Table to display list of clients -->
+  <table border="1" cellpadding="5" cellspacing="0">
     <thead>
- <!-- Table header row defining column titles -->
       <tr>
         <th>Name</th>
         <th>Email</th>
@@ -28,122 +15,125 @@
         <th>Actions</th>
       </tr>
     </thead>
-    <tbody>
-<!-- Example client entry row -->
+    <tbody> 
+ <!-- Sample client data -->
       <tr>
-        <td>lana beshir</td>
-        <td>lanabeshir@gmail.com</td>
+        <td>Farida Abdelrazek</td>
+        <td>Faridaabdelrazek@gmail.com</td>
         <td>555-1234</td>
         <td>Weight Loss</td>
         <td>2024-01-15</td>
         <td>
- <!-- Action buttons (placeholders for future functionality) -->
-          <a href="clients_edit.html">Edit</a>
+ <!-- Placeholder buttons -->
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
-<!-- Additional client rows follow the same pattern -->
-      <tr>
-        <td>Jana Farouk</td>
-        <td>jana@gmail.com</td>
+ <!-- Add other clients similarly -->
+<tr>
+        <td>Tarek Mohamed</td>
+        <td>Tarekkmohamed@gmail.com</td>
         <td>555-5678</td>
         <td>Muscle Gain</td>
         <td>2024-03-12</td>
         <td>
-          <a href="clients_edit.html">Edit</a>
+          <button type="button">Edit</button>
+          <button type="button">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>lana ahmed</td>
+        <td>lanabeshir@gmail.com</td>
+        <td>555-8765</td>
+        <td>General Fitness</td>
+        <td>2023-11-10</td>
+        <td>
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
       <tr>
         <td>Mohamed Beshir</td>
-        <td>mohamed@gmail.com</td>
-        <td>555-8765</td>
-        <td>General Fitness</td>
-        <td>2023-11-10</td>
-        <td>
-          <a href="clients_edit.html">Edit</a>
-          <button type="button">Delete</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Malak Tarek</td>
-        <td>Malak@gmail.com</td>
+        <td>Mohamedbeshir@gmail.com</td>
         <td>555-4321</td>
         <td>Weight Loss</td>
         <td>2024-06-01</td>
         <td>
-          <a href="clients_edit.html">Edit</a>
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
       <tr>
-        <td>Mirna Bolis</td>
-        <td>Mirna@gmail.com</td>
+        <td>Yassin el Massry</td>
+        <td>Yassin@gmail.com</td>
         <td>555-6789</td>
         <td>Muscle Gain</td>
         <td>2025-02-20</td>
         <td>
-          <a href="clients_edit.html">Edit</a>
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
       <tr>
-        <td>Karim Elmassry</td>
-        <td>Karim@gmail.com</td>
+        <td>Mirna Sameh</td>
+        <td>Mirna sameh@gmail.com</td>
         <td>555-3456</td>
         <td>General Fitness</td>
         <td>2024-09-15</td>
         <td>
-          <a href="clients_edit.html">Edit</a>
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
       <tr>
-        <td>Farida Abdelrazek</td>
-        <td>Farida@gmail.com</td>
+        <td>Malak Solima</td>
+        <td>Malaksoliman@gmail.com</td>
         <td>555-7890</td>
         <td>Weight Loss</td>
         <td>2024-12-05</td>
         <td>
-          <a href="clients_edit.html">Edit</a>
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
       <tr>
-        <td>Karim Abdelrazek</td>
-        <td>Karim@gmail.com</td>
+        <td>Ahmed Hany</td>
+        <td>Ahmedhany@gmail.com/td>
         <td>555-9012</td>
         <td>Muscle Gain</td>
         <td>2023-08-25</td>
         <td>
-          <a href="clients_edit.html">Edit</a>
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
       <tr>
-        <td>Diana ElMossalamy</td>
-        <td>diana@gmail.com</td>
+        <td>Ismail Mostafa</td>
+        <td>Ismailmostafa@gmail.com</td>
         <td>555-2345</td>
         <td>General Fitness</td>
         <td>2024-04-18</td>
         <td>
-          <a href="clients_edit.html">Edit</a>
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
       <tr>
-        <td>Seleem zaher</td>
-        <td>Seleem@gmail.com</td>
+        <td>Gamal Hussein</td>
+        <td>Gamalhussein@gmail.com</td>
         <td>555-6781</td>
         <td>Weight Loss</td>
         <td>2025-01-05</td>
         <td>
-          <a href="clients_edit.html">Edit</a>
+          <button type="button">Edit</button>
           <button type="button">Delete</button>
         </td>
       </tr>
+ 
+    
     </tbody>
   </table>
+
 </body>
 </html>
 
