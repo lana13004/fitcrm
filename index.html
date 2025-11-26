@@ -2,51 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Add New Client</title>
+  <title>FitCRM - Add New Client</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .btn-add {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn-add:hover {
+      background-color: #45a049;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
 
-  <h2>Add New Client</h2>
+  <div class="form-container">
+    <h2>New Client Form</h2>
 
-  <form>
-    <label>Full Name:</label>
-    <input type="text" name="fullname">
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text">
+    </div>
 
-    <label>Age:</label>
-    <input type="number" name="age">
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number">
+    </div>
 
-    <label>Gender:</label>
-    <select name="gender">
-      <option value="">Select</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="other">Other</option>
-    </select>
+    <div class="form-group">
+      <label>Gender</label>
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
 
-    <label>Email:</label>
-    <input type="email" name="email">
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email">
+    </div>
 
-    <label>Phone:</label>
-    <input type="tel" name="phone">
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="tel">
+    </div>
 
-    <label>Fitness Goal:</label>
-    <select name="goal">
-      <option value="">Select</option>
-      <option value="Weight Loss">Weight Loss</option>
-      <option value="Muscle Gain">Muscle Gain</option>
-      <option value="General Fitness">General Fitness</option>
-    </select>
+    <div class="form-group">
+      <label>Fitness Goal</label>
+      <select>
+        <option>Weight Loss</option>
+        <option>Muscle Gain</option>
+        <option>General Fitness</option>
+      </select>
+    </div>
 
-    <label>Membership Start Date:</label>
-    <input type="date" name="startdate">
+    <div class="form-group">
+      <label>Membership Start Date</label>
+      <input type="date">
+    </div>
 
-    <br><br>
-    <button type="button">Add Client</button>
-  </form>
+    <button class="btn-add">Add Client</button>
 
-  <br>
-  <a href="clients.html">View Client List</a>
+    <a class="back-link" href="clients.html">Back to Client List</a>
+  </div>
 
 </body>
 </html>
