@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>FitCRM - New Client Form</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>New Client Form</h1>
-  
+
+  <!-- Page Header -->
+  <header>
+    <h1>🌟 FitCRM - Add New Client 🌟</h1>
+  </header>
+
+  <!-- New Client Form -->
   <form>
-    <label>Full Name: <input type="text" name="fullname"></label><br>
-    <label>Age: <input type="number" name="age"></label><br>
+    <!-- Full Name input -->
+    <label>Full Name: 
+      <input type="text" name="fullname" placeholder="Enter full name">
+    </label>
+
+    <!-- Age input -->
+    <label>Age: 
+      <input type="number" name="age" placeholder="Enter age">
+    </label>
+
+    <!-- Gender dropdown -->
     <label>Gender:
       <select name="gender">
+        <option value="">Select gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="other">Other</option>
       </select>
-    </label><br>
-    <label>Email: <input type="email" name="email"></label><br>
-    <label>Phone: <input type="tel" name="phone"></label><br>
+    </label>
+
+    <!-- Email input -->
+    <label>Email: 
+      <input type="email" name="email" placeholder="Enter email">
+    </label>
+
+    <!-- Phone input -->
+    <label>Phone: 
+      <input type="tel" name="phone" placeholder="Enter phone">
+    </label>
+
+    <!-- Fitness goal dropdown -->
     <label>Fitness Goal:
       <select name="goal">
+        <option value="">Select goal</option>
         <option value="weightloss">Weight Loss</option>
         <option value="musclegain">Muscle Gain</option>
         <option value="generalfitness">General Fitness</option>
         <option value="other">Other</option>
       </select>
-    </label><br>
-    <label>Membership Start Date: <input type="date" name="startdate"></label><br>
+    </label>
+
+    <!-- Membership Start Date -->
+    <label>Membership Start Date: 
+      <input type="date" name="startdate">
+    </label>
+
+    <!-- Add Client Button (placeholder, no function yet) -->
     <button type="button">Add Client</button>
   </form>
 
-  <a href="clients.html">Go to Client List →</a>
+  <!-- Navigation link to Client List page -->
+  <p class="nav-link">
+    <a href="clients.html">➡ Go to Client List</a>
+  </p>
+
 </body>
 </html>
 
